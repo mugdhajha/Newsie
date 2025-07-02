@@ -20,7 +20,12 @@ const Home = () => {
         setSpin(true);
         try {
             const res = await axios.get(
-                `https://newsapi.org/v2/top-headlines?category=${cat.toLowerCase()}&country=us&pageSize=10&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`
+                `https://newsapi.org/v2/top-headlines?category=${cat.toLowerCase()}&country=us&pageSize=10&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`,
+                {
+                    headers: {
+                    "User-Agent": "Mozilla/5.0"
+                    }
+                }
             );
             setItems(res.data.articles || []);
         } catch (err) {
