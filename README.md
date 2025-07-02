@@ -14,7 +14,7 @@ Newsie~ is a responsive web app that brings you the latest news in real time usi
 
 This app comes with features like:
 
---> The top nav bar containing links to navigate to different parts of the app.
+--> The top nav bar containing links to navigate to different parts of the app.\n 
 --> A search option in the navbar which let's you search for the news you want to read.
 --> Category Tabs in the home page for direct access to some category of news including: Buisness,Entertainment,Science and Sports.
 --> An aritcle list display that contains various article cards containing new fetched from NewsAPI which highlight on haver and when clicked shows full article details.
