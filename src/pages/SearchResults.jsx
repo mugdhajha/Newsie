@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { useSearchParams } from "react-router-dom";
 import axios from "axios";
 import "../styles/home.css";
@@ -10,23 +10,21 @@ const SearchResults = () => {
   const [list, setList] = useState([]);
   const [load, setLoad] = useState(false);
 
-  const getNews = async () => {
+  const getNews = useCallback(async () => {
     if (!q) return;
     setLoad(true);
     try {
-      const res = await axios.get(
-        `https://newsapi.org/v2/everything?q=${q}&language=en&pageSize=10&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`
-      );
+      const res = await axios.get(`/.netlify/functions/getNews?q=${q}`);
       setList(res.data.articles);
     } catch (err) {
-      console.error(" Search fail:", err);
+      console.error("Search fail:", err);
     }
     setLoad(false);
-  };
+  }, [q]);
 
   useEffect(() => {
     getNews();
-  }, [q]);
+  }, [getNews]);
 
   return (
     <div className="home">
@@ -38,7 +36,7 @@ const SearchResults = () => {
         <div className="loader"></div>
       ) : list.length === 0 ? (
         <p style={{ color: "white", textAlign: "center", marginTop: "2em", fontSize: "1.9em" }}>
-          No articles found for "<strong>{q}</strong>".Try searching for something else!
+          No articles found for "<strong>{q}</strong>". Try searching for something else!
         </p>
       ) : (
         <div className="articles-list">
@@ -59,7 +57,6 @@ const SearchResults = () => {
           ))}
         </div>
       )}
-
     </div>
   );
 };
