@@ -32,6 +32,7 @@ const Home = () => {
 
     useEffect(() => {
         fetchNews();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [cat]);
 
     return (
