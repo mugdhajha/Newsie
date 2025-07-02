@@ -1,0 +1,91 @@
+.home {
+  background-color: #121212;
+  color: white;
+  padding: 2em 1em;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+
+.summary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+
+.summary-card {
+  background-color: #373535;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+.summary-card img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+
+.card-content-my-sum {
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.card-text {
+  flex: 1;
+}
+
+.card-text h3 {
+  font-size: 1.4em;
+  margin-bottom: 0.5em;
+}
+
+.card-text p {
+  margin: 0.3em 0;
+  color: #ccc;
+}
+
+
+.full-btn {
+  align-self: flex-end;
+  margin-top: 1.2em;
+  background-color: #0072ff;
+  color: white;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95em;
+  transition: background-color 0.3s ease;
+}
+
+.full-btn:hover {
+  background-color: #0057cc;
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 600px) {
+  .home {
+    padding: 1em;
+    padding-top: 12vh;
+  }
+
+  .card-content-my-sum {
+    padding: 1em;
+  }
+
+  .card-text h3 {
+    font-size: 1.2em;
+  }
+}

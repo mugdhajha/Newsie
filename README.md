@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Newsie~
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple and smart news reader that helps you stay updated with quick summaries and smooth reading — made with React and Gemini AI.
 
-## Available Scripts
+## Live Demo
 
-In the project directory, you can run:
+This project is deployed at : 
 
-### `npm start`
+## About
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Newsie~ is a responsive web app that brings you the latest news in real time using NewsAPI.org. It uses Google Gemini Flash to turn each article into 3 easy-to-read bullet points. You can explore news by category, search for specific topics, and revisit past summaries anytime in your “My Summaries” section.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+This app comes with features like:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+--> The top nav bar containing links to navigate to different parts of the app.
+--> A search option in the navbar which let's you search for the news you want to read.
+--> Category Tabs in the home page for direct access to some category of news including: Buisness,Entertainment,Science and Sports.
+--> An aritcle list display that contains various article cards containing new fetched from NewsAPI which highlight on haver and when clicked shows full article details.
+--> An article detail view that shows the article's heading,image,source,author and when it was published,
+--> This detail view comes with two buttons: one the Read full article button that is linked to the actual article page and the other is the summarise button .
+--> The summarise button on click calls Gemini Flash (Google AI) API directly from frontend using axios and summarises the article in three points.
+--> There is a my summaries page that stores all the summaries you have generated till now along with the date of generation.
 
-### `npm run build`
+## Technologies used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+--> React : for the app creation
+--> Axios : for calling the APIs
+--> NewsAPI.org : the API used for the news 
+--> Google Gemini Flash : The API used for summarising the articles
+--> Css : for the customization and responsiveness of the app
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+In order to install this app in your device , these are the set of instructions to write in the bash:
 
-### `npm run eject`
+git clone https://github.com/your-username/Newsie.git
+cd Newsie
+npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Environment variables
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+the .env file is present in the project there just enter you api id for newAPI and Gemini Api in the designated places.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Then finally run :
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+npm start
