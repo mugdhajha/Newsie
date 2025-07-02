@@ -4,7 +4,7 @@ A simple and smart news reader that helps you stay updated with quick summaries 
 
 ## Live Demo
 
-This project is deployed at : 
+This project is deployed at : https://monumental-travesseiro-ac3ee9.netlify.app/
 
 ## About
 
