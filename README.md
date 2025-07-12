@@ -35,7 +35,7 @@ This app comes with features like:
 
 In order to install this app in your device , these are the set of instructions to write in the bash:
 
-git clone https://github.com/your-username/Newsie.git  
+git clone https://github.com/mugdhajha/Newsie.git  
 cd Newsie  
 npm install  
 
